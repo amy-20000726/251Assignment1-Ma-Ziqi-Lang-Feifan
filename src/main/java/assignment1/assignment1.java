@@ -1,112 +1,71 @@
 package assignment1;
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.KeyStroke;
-public class assignment1 {
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+import javax.swing.text.*;
+
+//简单的文本编辑器
+
+public class assignment1 extends JFrame {
+    public JTextPane textPane = new JTextPane(); //文本窗格d，编辑窗口
+    public JFileChooser filechooser = new JFileChooser(); //文件选择器
+
+    public assignment1()
+    {
+        super("Text Editor");
+
+        Action[] actions=			//菜单项的各种功能
+                {
+
+                };
+        setJMenuBar(createJMenuBar(actions));		//根据actions创建菜单栏
+        Container container=getContentPane();
+        container.add(textPane, BorderLayout.CENTER);
+
+        setSize(800,600);
+        setVisible(true);
+        //	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    private JMenuBar createJMenuBar(Action[] actions)	//创建菜单栏的函数
+    {
+        JMenuBar menubar=new JMenuBar();
+        JMenu menuFile=new JMenu("File");
+        JMenu menuSearch=new JMenu("Search");
+        JMenu menuView=new JMenu("View");
+        JMenu menuManage=new JMenu("Manage");
+        JMenu menuHelp=new JMenu("Help");
 
 
-    public class main extends JFrame{
-
-        /**
-         *
-         */
-        private static final long serialVersionUID = 1L;
-        private JMenuBar menuBar;
-        //菜单栏
-        private JMenu menu_File,menu_Edit,menu_Help,menu_View,menu_Manage;
-        //菜单栏内的菜单
-        private JMenuItem item_new,item_open,item_save,item_exit,item_print;
-        //对于file菜单的子项
-        private JMenuItem item_undo,item_cut,item_copy,item_stick,item_delete;
-        //对于edit菜单的子项
-        private JMenuItem item_about;
-        //对于help菜单的子项
+        menuFile.add(new JMenuItem(actions[0]));
+        menuFile.add(new JMenuItem(actions[1]));
+        menuFile.add(new JMenuItem(actions[2]));
+        menuFile.add(new JMenuItem(actions[3]));
 
 
-        public main() {
-            initMenuBar();
-
-            this.setJMenuBar(menuBar);
-            this.setSize(800,600);
-            this.setTitle("Text Editor");
-            this.setVisible(true);
-            this.setLocationRelativeTo(null);
-            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            JTextArea jTextArea = new JTextArea();
-            JScrollPane scrollPane = new JScrollPane(jTextArea);
-        }
+        menuSearch.add(new JMenuItem(actions[4]));
+        menuSearch.add(new JMenuItem(actions[5]));
+        menuSearch.add(new JMenuItem(actions[6]));
 
 
+        menuHelp.add(new JMenuItem(actions[7]));
+        menuHelp.add(new JMenuItem(actions[8]));
 
 
-
-        @SuppressWarnings("deprecation")
-        public void initMenuBar() {
-            menuBar = new JMenuBar();
-            menu_File = new JMenu("File(F)");
-            menu_File.setMnemonic('f');
-            item_new = new JMenuItem("New");
-            item_open = new JMenuItem("Open");
-            item_save = new JMenuItem("Save");
-            item_exit = new JMenuItem("Exit");
-            item_print = new JMenuItem("Print");
-            menu_File.add(item_new);
-            menu_File.add(item_open);
-            menu_File.add(item_save);
-            menu_File.add(item_exit);
-            menu_File.add(item_print);
-            //File 菜单
-
-            menu_Edit = new JMenu("Search(E)");
-            menu_Edit.setMnemonic('e');
-            item_undo = new JMenuItem("撤销");
-            item_cut = new JMenuItem("剪切");
-            item_copy = new JMenuItem("复制");
-            item_stick = new JMenuItem("粘贴");
-            item_delete = new JMenuItem("删除");
-            menu_Edit.add(item_undo);
-            menu_Edit.add(item_cut);
-            menu_Edit.add(item_copy);
-            menu_Edit.add(item_stick);
-            menu_Edit.add(item_delete);
-            //Edit 菜单
-
-            menu_Help = new JMenu("Help(H)");
-            menu_Help.setMnemonic('h');
-            item_about = new JMenuItem("About");
-            menu_Help.add(item_about);
-            //Help 菜单
-
-            menu_Manage = new JMenu("Manage");
-
-            menu_View = new JMenu("View(O)");
-//			menu_Format.setMnemonic('o');
-//			item_word_format = new JMenuItem("字体(F)");
-//			item_word_format.setAccelerator(KeyStroke.getKeyStroke('F',java.awt.Event.CTRL_MASK,false));//给item添加快捷键
-//			menu_Format.add(item_word_format);
+        menubar.add(menuFile);
+        menubar.add(menuSearch);
+        menubar.add(menuView);
+        menubar.add(menuManage);
+        menubar.add(menuHelp);
+        return menubar;
+    }
 
 
-
-
-            menuBar.add(menu_File);
-            menuBar.add(menu_Edit);
-            menuBar.add(menu_View);
-            menuBar.add(menu_Manage);
-            menuBar.add(menu_Help);
-
-        }
-
-
-
-        public void main(String[] args) {
-            main t5 = new main();
-        }
-
-
-
+    public static void main(String[] args)
+    {
+        new assignment1();
     }
 }
+
+
