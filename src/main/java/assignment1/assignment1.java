@@ -2,6 +2,7 @@ package assignment1;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.util.Calendar;
 import javax.swing.*;
 import javax.swing.text.*;
 
@@ -80,57 +81,137 @@ public class assignment1 extends JFrame {
     //New
     class New extends AbstractAction
     {
-
+        public New()
+        {
+            super("New    Ctrl+N");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            textPane.setDocument(new DefaultStyledDocument());
+        }
     }
 
     //Open
     class Open extends AbstractAction
     {
-
+        public Open()
+        {
+            super("Open   Ctrl+O");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            //Display Open File dialog
+            int i=filechooser.showOpenDialog(assignment1.this);
+            //Click the dialog box to open options
+            if(i==JFileChooser.APPROVE_OPTION)
+            {
+                //Get selected document
+                File file=filechooser.getSelectedFile();
+                try
+                {
+                    InputStream is=new FileInputStream(file);
+                    textPane.read(is, "d");
+                }
+                catch(Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        }
     }
 
 
     //Save
     class Save extends AbstractAction
     {
-
+        private static final long serialVersionUID = 1L;
+        public Save()
+        {
+            super("Save   Ctrl+S");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            int i=filechooser.showSaveDialog(assignment1.this);
+            if(i==JFileChooser.APPROVE_OPTION)
+            {
+                File f=filechooser.getSelectedFile();
+                try
+                {
+                    FileOutputStream out=new FileOutputStream(f);
+                    out.write(textPane.getText().getBytes());
+                }
+                catch(Exception ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        }
     }
 
 
     //Exit
     class Exit extends AbstractAction
     {
-
+        private static final long serialVersionUID = 1L;
+        public Exit()
+        {
+            super("Exit");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            dispose();
+        }
     }
 
 
     //Cut
     class Cut extends AbstractAction
     {
-
+        private static final long serialVersionUID = 1L;
+        public Cut()
+        {
+            super("Cut    Ctrl+X");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            textPane.cut();
+        }
     }
 
 
     //Copy
     class Copy extends AbstractAction
     {
-
+        private static final long serialVersionUID = 1L;
+        public Copy()
+        {
+            super("Copy    Ctrl+C");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            textPane.copy();
+        }
     }
 
 
     //Paste
     class Paste extends AbstractAction
     {
-
+        private static final long serialVersionUID = 1L;
+        public Paste()
+        {
+            super("Paste    Ctrl+V");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            textPane.paste();
+        }
     }
 
 
     //About
     class About extends AbstractAction
     {
-        /**
-         *
-         */
         private static final long serialVersionUID = 1L;
         public About()
         {
@@ -147,9 +228,7 @@ public class assignment1 extends JFrame {
     //Help
     class Help extends AbstractAction
     {
-        /**
-         *
-         */
+
         private static final long serialVersionUID = 1L;
         public Help()
         {
