@@ -8,8 +8,8 @@ import javax.swing.text.*;
 //简单的文本编辑器
 
 public class assignment1 extends JFrame {
-    public JTextPane textPane = new JTextPane(); //文本窗格d，编辑窗口
-    public JFileChooser filechooser = new JFileChooser(); //文件选择器
+    public JTextPane textPane = new JTextPane();
+    public JFileChooser filechooser = new JFileChooser();
 
     public assignment1()
     {
@@ -17,15 +17,26 @@ public class assignment1 extends JFrame {
 
         Action[] actions=			//菜单项的各种功能
                 {
+                        new New(),
+                        new Open(),
+                        new Save(),
+                        new Exit(),
 
+                        new Cut(),
+                        new Copy(),
+                        new Paste(),
+
+                        new About(),
+                        new Help(),
+                        new Print(),
                 };
-        setJMenuBar(createJMenuBar(actions));		//根据actions创建菜单栏
+        setJMenuBar(createJMenuBar(actions));
         Container container=getContentPane();
         container.add(textPane, BorderLayout.CENTER);
 
         setSize(800,600);
         setVisible(true);
-        //	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
 
     private JMenuBar createJMenuBar(Action[] actions)	//创建菜单栏的函数
@@ -42,7 +53,7 @@ public class assignment1 extends JFrame {
         menuFile.add(new JMenuItem(actions[1]));
         menuFile.add(new JMenuItem(actions[2]));
         menuFile.add(new JMenuItem(actions[3]));
-
+        menuFile.add(new JMenuItem(actions[4]));
 
         menuSearch.add(new JMenuItem(actions[4]));
         menuSearch.add(new JMenuItem(actions[5]));
@@ -62,6 +73,68 @@ public class assignment1 extends JFrame {
     }
 
 
+    class New extends AbstractAction		//新建
+    {
+
+    }
+
+
+    class Open extends AbstractAction		//打开
+    {
+
+    }
+
+
+
+    class Save extends AbstractAction		//保存
+    {
+
+    }
+
+
+
+    class Exit extends AbstractAction		//退出
+    {
+
+    }
+
+
+
+    class Cut extends AbstractAction		//剪切
+    {
+
+    }
+
+
+
+    class Copy extends AbstractAction		//复制
+    {
+
+    }
+
+
+
+    class Paste extends AbstractAction		//粘贴
+    {
+
+    }
+
+
+
+    class About extends AbstractAction
+    {
+
+    }
+
+    class Help extends AbstractAction
+    {
+
+    }
+
+    class Print extends AbstractAction
+    {
+
+    }
     public static void main(String[] args)
     {
         new assignment1();
