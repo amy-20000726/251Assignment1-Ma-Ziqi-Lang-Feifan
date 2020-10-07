@@ -14,8 +14,8 @@ public class assignment1 extends JFrame {
     public assignment1()
     {
         super("Text Editor");
-
-        Action[] actions=			//菜单项的各种功能
+//create classes of actions
+        Action[] actions=
                 {
                         new New(),
                         new Open(),
@@ -34,12 +34,15 @@ public class assignment1 extends JFrame {
         Container container=getContentPane();
         container.add(textPane, BorderLayout.CENTER);
 
+        //set size of the screen
         setSize(800,600);
+        //set windows visible
         setVisible(true);
 
     }
 
-    private JMenuBar createJMenuBar(Action[] actions)	//创建菜单栏的函数
+    //create menu bar
+    private JMenuBar createJMenuBar(Action[] actions)
     {
         JMenuBar menubar=new JMenuBar();
         JMenu menuFile=new JMenu("File");
@@ -48,18 +51,20 @@ public class assignment1 extends JFrame {
         JMenu menuManage=new JMenu("Manage");
         JMenu menuHelp=new JMenu("Help");
 
-
+    //Assign drop-down Windows
+        //File
         menuFile.add(new JMenuItem(actions[0]));
         menuFile.add(new JMenuItem(actions[1]));
         menuFile.add(new JMenuItem(actions[2]));
         menuFile.add(new JMenuItem(actions[3]));
         menuFile.add(new JMenuItem(actions[4]));
 
+        //Search
         menuSearch.add(new JMenuItem(actions[4]));
         menuSearch.add(new JMenuItem(actions[5]));
         menuSearch.add(new JMenuItem(actions[6]));
 
-
+        //Help
         menuHelp.add(new JMenuItem(actions[7]));
         menuHelp.add(new JMenuItem(actions[8]));
 
@@ -72,65 +77,91 @@ public class assignment1 extends JFrame {
         return menubar;
     }
 
+    //New
+    class New extends AbstractAction
+    {
 
-    class New extends AbstractAction		//新建
+    }
+
+    //Open
+    class Open extends AbstractAction
     {
 
     }
 
 
-    class Open extends AbstractAction		//打开
+    //Save
+    class Save extends AbstractAction
     {
 
     }
 
 
-
-    class Save extends AbstractAction		//保存
+    //Exit
+    class Exit extends AbstractAction
     {
 
     }
 
 
-
-    class Exit extends AbstractAction		//退出
+    //Cut
+    class Cut extends AbstractAction
     {
 
     }
 
 
-
-    class Cut extends AbstractAction		//剪切
+    //Copy
+    class Copy extends AbstractAction
     {
 
     }
 
 
-
-    class Copy extends AbstractAction		//复制
+    //Paste
+    class Paste extends AbstractAction
     {
 
     }
 
 
-
-    class Paste extends AbstractAction		//粘贴
-    {
-
-    }
-
-
-
+    //About
     class About extends AbstractAction
     {
-
+        /**
+         *
+         */
+        private static final long serialVersionUID = 1L;
+        public About()
+        {
+            super("brief message");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            JOptionPane.showMessageDialog(assignment1.this,"Some basic functions of notepad are realized\r\n"
+                    + "\r\n"
+                    + "","About",JOptionPane.PLAIN_MESSAGE);
+        }
     }
 
+    //Help
     class Help extends AbstractAction
     {
-
+        /**
+         *
+         */
+        private static final long serialVersionUID = 1L;
+        public Help()
+        {
+            super("group numbers' information");
+        }
+        public void actionPerformed(ActionEvent e)
+        {
+            JOptionPane.showMessageDialog(assignment1.this,"Feifan_Lang  Ziqi_Ma","group numbers' information",JOptionPane.PLAIN_MESSAGE);
+        }
     }
 
+    //Print
     class Print extends AbstractAction
     {
 
