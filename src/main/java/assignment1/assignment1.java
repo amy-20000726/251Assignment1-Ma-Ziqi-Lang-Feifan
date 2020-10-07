@@ -30,6 +30,8 @@ public class assignment1 extends JFrame {
                         new About(),
                         new Help(),
                         new Print(),
+                        new Search(),
+                        new Time(),
                 };
         setJMenuBar(createJMenuBar(actions));
         Container container=getContentPane();
@@ -60,10 +62,10 @@ public class assignment1 extends JFrame {
         menuFile.add(new JMenuItem(actions[3]));
         menuFile.add(new JMenuItem(actions[4]));
 
-        //Search
-        menuSearch.add(new JMenuItem(actions[4]));
-        menuSearch.add(new JMenuItem(actions[5]));
-        menuSearch.add(new JMenuItem(actions[6]));
+
+        menuFile.add(new JMenuItem(actions[4]));
+        menuFile.add(new JMenuItem(actions[5]));
+        menuFile.add(new JMenuItem(actions[6]));
 
         //Help
         menuHelp.add(new JMenuItem(actions[7]));
