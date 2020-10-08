@@ -1,0 +1,17 @@
+Lines of code metrics,Thu, 8 Oct 2020 23:01:23 CST
+Package,LOC,LOC(rec),LOCp,LOCp(rec),LOCt,LOCt(rec)
+"",n/a,261,n/a,261,n/a,0
+"assignment1",261,261,261,261,0,0
+
+Module,L(Groovy),L(HTML),L(J),L(KT),L(XML),LOC,LOCp,LOCt,NCLOC,NCLOCp,NCLOCt
+"251Assignment1-Ma-Ziqi-Lang-Feifan",0,951,261,0,34,"1,259",261,0,"1,236",238,0
+
+FileType,LOC,NCLOC
+"HTML",951,951
+"Java",261,238
+"Markdown",13,13
+"XML",34,34
+
+Project,L(Groovy),L(HTML),L(J),L(KT),L(XML),LOC,LOCp,LOCt,NCLOC,NCLOCp,NCLOCt
+"project",0,951,261,0,34,"1,259",261,0,"1,236",238,0
+
