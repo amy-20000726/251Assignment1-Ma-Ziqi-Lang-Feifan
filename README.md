@@ -4,7 +4,7 @@ member1:Ziqi Ma ID: 19029646
 member2:Feifan Lang ID: 19029695
 
 2.
-RUN src/main/java/assignment1(package)/assignment1(class) directly.No other folders.
+RUN src/main/java/assignment1(package)/assignment1(class) directly.No other folders should be uesd to run.
 
 3.
 Ziqi created the respository,we used git to upload files.
