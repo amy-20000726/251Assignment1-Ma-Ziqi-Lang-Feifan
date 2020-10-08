@@ -272,7 +272,7 @@ class EditWindow extends JFrame implements ActionListener{
                         if (!job.printDialog()) {                        //Cancel printing
                             return;
                         }
-                        //设置打印页面
+                        //Set up the print page
                         job.setPrintable(new Printable() {
                             @Override
                             public int print(Graphics graphics, PageFormat pageFormat,int pageIndex) throws PrinterException {
