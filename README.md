@@ -1,5 +1,5 @@
-# 251Assignment1-Ma-Ziqi-Lang-Feifan
-1.
+# 251Assignment1-Ma-Ziqi-Lang-Feifan（https://github.com/amy-20000726/251Assignment1-Ma-Ziqi-Lang-Feifan.git）
+## 1.member ID:
 member1:Ziqi Ma ID: 19029646
 member2:Feifan Lang ID: 19029695
 
