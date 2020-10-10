@@ -1,17 +1,17 @@
 # 251Assignment1-Ma-Ziqi-Lang-Feifan（https://github.com/amy-20000726/251Assignment1-Ma-Ziqi-Lang-Feifan.git）
 ## 1.member ID:
-member1:Ziqi Ma ID: 19029646
+member1:Ziqi Ma ID: 19029646  
 member2:Feifan Lang ID: 19029695
 
 ## 2.How to Use
 RUN src/main/java/assignment1(package)/assignment1(class) directly.No other folders should be uesd to run.
 
 ## 3.Division of labor
-Ziqi created the respository,we used git to upload files.
+Ziqi created the respository,we used git to upload files.  
 
 Ziqi: New Open Exit T&D  
 
-Feifan: Select Copy Paste Cut
+Feifan: Select Copy Paste Cut  
 
 We did the other parts together.(We also communicated by 'issues' in github.)
 
