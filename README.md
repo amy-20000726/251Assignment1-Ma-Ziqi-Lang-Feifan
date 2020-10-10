@@ -9,9 +9,9 @@ RUN src/main/java/assignment1(package)/assignment1(class) directly.No other fold
 ## 3.Division of labor
 Ziqi created the respository,we used git to upload files.  
 
-Ziqi: New Open Exit T&D  (upload the zip of project)
+Ziqi: New Open Exit T&D  
 
-Feifan: Select Copy Paste Cut  (upload Readme and the two report(Metirics,PMD))
+Feifan: Select Copy Paste Cut  
 
 We did the other parts together.(We also communicated by 'issues' in github.)
 
